@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Case Study In Development — Brandon Guzzardo</title>
+<meta name="description" content="This case study is currently being written. Check back soon, or get in touch directly."/>
+<meta name="robots" content="noindex"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://brandonguzzardo.com/coming-soon.html"/>
+<meta property="og:title" content="Case Study In Development — Brandon Guzzardo"/>
+<meta property="og:description" content="This case study is currently being written. Check back soon."/>
+
+<!-- Favicon — BG brand mark -->
+<link rel="icon" type="image/png" href="images/favicon.png"/>
+<link rel="apple-touch-icon" href="images/favicon.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<style>
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --navy:#080E1A;
+  --dark:#0D1623;
+  --card:#111C2D;
+  --orange:#E8601C;
+  --orange2:#F07030;
+  --light:#B8CDD8;
+  --white:#F0F4F8;
+  --text:#D0DCE8;
+  --muted:#7A92A8;
+  --border:rgba(108,160,200,0.15);
+  --border2:rgba(232,96,28,0.25);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--navy);
+  color:var(--text);
+  font-family:'DM Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* ── NAV ──────────────────────────────── */
+nav {
+  position:sticky; top:0; z-index:50;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:18px 60px;
+  background:rgba(8,14,26,0.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo {
+  display:inline-flex; align-items:center;
+  text-decoration:none;
+  transition:opacity .2s;
+}
+.nav-logo:hover { opacity:0.85; }
+.nav-logo img { height:40px; width:auto; display:block; }
+@media(max-width:600px){ .nav-logo img { height:34px; } }
+.nav-back {
+  color:var(--muted);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  display:inline-flex; align-items:center; gap:6px;
+  transition:color .2s;
+}
+.nav-back:hover { color:var(--orange); }
+.nav-back .arrow { transition:transform .2s; }
+.nav-back:hover .arrow { transform:translateX(-3px); }
+
+/* ── MAIN ─────────────────────────────── */
+main {
+  flex:1;
+  display:flex; align-items:center; justify-content:center;
+  padding:80px 60px;
+  position:relative;
+  overflow:hidden;
+}
+.bg-glow {
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(232,96,28,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 20% 80%, rgba(20,40,70,0.4) 0%, transparent 60%);
+  pointer-events:none;
+}
+.content {
+  position:relative; z-index:1;
+  max-width:680px;
+  text-align:center;
+}
+.eyebrow {
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:11px; font-weight:500;
+  letter-spacing:3px; text-transform:uppercase;
+  color:var(--orange);
+  margin-bottom:24px;
+}
+.eyebrow::before, .eyebrow::after {
+  content:''; display:block;
+  width:32px; height:1px;
+  background:var(--orange);
+}
+.title {
+  font-family:'Syne', sans-serif;
+  font-weight:800;
+  font-size:clamp(44px, 6vw, 64px);
+  color:var(--white);
+  line-height:1.1;
+  letter-spacing:-1.5px;
+  margin-bottom:18px;
+}
+.title .accent { color:var(--orange); }
+.brand-name {
+  font-family:'Syne', sans-serif;
+  font-weight:700;
+  font-size:20px;
+  color:var(--orange2);
+  margin-bottom:24px;
+  letter-spacing:0.5px;
+  min-height:30px;
+}
+.copy {
+  font-size:16px;
+  color:var(--text);
+  line-height:1.75;
+  margin-bottom:14px;
+}
+.copy.muted {
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:48px;
+}
+.actions {
+  display:flex; justify-content:center; gap:16px; flex-wrap:wrap;
+}
+.btn-primary, .btn-outline {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 32px;
+  border-radius:4px;
+  text-decoration:none;
+  font-weight:500;
+  font-size:13px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  transition:all .2s;
+}
+.btn-primary {
+  background:var(--orange);
+  color:#fff;
+}
+.btn-primary:hover {
+  background:var(--orange2);
+  transform:translateY(-2px);
+}
+.btn-outline {
+  border:1px solid var(--border2);
+  color:var(--light);
+}
+.btn-outline:hover {
+  border-color:var(--orange);
+  color:var(--orange);
+  transform:translateY(-2px);
+}
+
+/* ── DIVIDER + FOOTER ─────────────────── */
+.divider {
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--border), transparent);
+  margin:0 60px;
+}
+footer {
+  background:var(--dark);
+  border-top:1px solid var(--border);
+  padding:24px 60px;
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:13px;
+  color:var(--muted);
+}
+footer .right {
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+footer .right span { color:var(--orange); }
+
+/* ── BACK TO TOP BUTTON ─────────────── */
+.back-to-top{
+  position:fixed;bottom:24px;right:24px;z-index:80;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--orange);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;border:none;
+  box-shadow:0 8px 24px rgba(232,96,28,0.35),0 2px 8px rgba(0,0,0,0.4);
+  opacity:0;transform:translateY(80px) scale(0.9);
+  transition:opacity .3s,transform .3s,background .2s;
+  pointer-events:none;
+}
+.back-to-top.visible{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.back-to-top:hover{background:var(--orange2);transform:translateY(-2px) scale(1)}
+.back-to-top svg{width:20px;height:20px;display:block}
+
+/* ── MOBILE ───────────────────────────── */
+@media(max-width:900px) {
+  nav { padding:16px 24px; }
+  main { padding:60px 24px; }
+  footer { padding:20px 24px; flex-direction:column; gap:8px; text-align:center; }
+  .divider { margin:0 24px; }
+}
+@media(max-width:600px) {
+  .title { font-size:36px; letter-spacing:-1px; }
+  .brand-name { font-size:17px; }
+  .copy { font-size:15px; }
+  .actions { flex-direction:column; align-items:stretch; }
+  .btn-primary, .btn-outline { justify-content:center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo" aria-label="Brandon Guzzardo — Home"><img src="images/brand-logo.png" alt="Brandon Guzzardo"></a>
+  <a href="portfolio.html" class="nav-back">
+    <span class="arrow">←</span> Back to Portfolio
+  </a>
+</nav>
+
+<main>
+  <div class="bg-glow"></div>
+  <div class="content">
+    <div class="eyebrow">Case Study In Development</div>
+    <h1 class="title">This story is<br>still being written.</h1>
+    <div class="brand-name" id="brand-name">&nbsp;</div>
+    <p class="copy">
+      The full case study for this brand — the brief, the creative process, the design decisions,
+      and the final system — is currently in production.
+    </p>
+    <p class="copy muted">
+      Curious about this work specifically? Reach out and I'll walk you through it personally.
+    </p>
+    <div class="actions">
+      <a href="mailto:brandonjguzzardo@gmail.com" class="btn-primary">Ask About This Project</a>
+      <a href="portfolio.html" class="btn-outline">← Back to Portfolio</a>
+    </div>
+  </div>
+</main>
+
+<div class="divider"></div>
+
+<button class="back-to-top" id="back-to-top" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<footer>
+  <div>© 2026 Brandon Guzzardo</div>
+  <div class="right">Built with <span>AI</span> · Designed with Intent</div>
+</footer>
+
+<script>
+(function(){
+  const btn=document.getElementById('back-to-top');
+  if(!btn)return;
+  const footer=document.querySelector('footer');
+  let footerVisible=false;
+  function update(){
+    btn.classList.toggle('visible',window.scrollY>400 && !footerVisible);
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+  if(footer){
+    new IntersectionObserver(entries=>{
+      footerVisible=entries[0].isIntersecting;
+      update();
+    },{threshold:0.05}).observe(footer);
+  }
+  update();
+})();
+</script>
+
+<script>
+/* Read ?brand=name from URL and personalize the page */
+(function(){
+  const brandMap = {
+    'bizy-bz':           'Bizy Bz Buzzar',
+    'blueprint':         'Blueprint Branding / Prime Collective',
+    'roam-fetch':        'Roam & Fetch',
+    'unzipped-live':     'Unzipped Live',
+    'zippy-content':     'Zippy Content',
+  };
+  const params = new URLSearchParams(window.location.search);
+  const brand = params.get('brand');
+  const el = document.getElementById('brand-name');
+  if (brand && brandMap[brand]) {
+    el.textContent = brandMap[brand];
+    document.title = brandMap[brand] + ' — Case Study In Development';
+  } else {
+    el.style.display = 'none';
+  }
+})();
+</script>
+
+</body>
+</html>

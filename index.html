@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Brandon Guzzardo — Digital Brand Builder &amp; E-Commerce Operator</title>
+<meta name="description" content="15+ years building brands, e-commerce operations, and AI-powered digital systems. Brand developer, e-commerce operator, and AI-augmented professional."/>
+<meta name="author" content="Brandon Guzzardo"/>
+
+<!-- Open Graph / Facebook / LinkedIn -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://brandonguzzardo.org/"/>
+<meta property="og:title" content="Brandon Guzzardo — Digital Brand Builder"/>
+<meta property="og:description" content="15+ years building brands, e-commerce operations, and AI-powered digital systems."/>
+<meta property="og:image" content="https://brandonguzzardo.org/og-image.png"/>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Brandon Guzzardo — Digital Brand Builder"/>
+<meta name="twitter:description" content="15+ years building brands, e-commerce operations, and AI-powered digital systems."/>
+<meta name="twitter:image" content="https://brandonguzzardo.org/og-image.png"/>
+
+<!-- Favicon — BG brand mark -->
+<link rel="icon" type="image/png" href="images/favicon.png"/>
+<link rel="apple-touch-icon" href="images/favicon.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#080E1A;
+  --dark:#0D1623;
+  --card:#111C2D;
+  --card2:#162035;
+  --orange:#E8601C;
+  --orange2:#F07030;
+  --gold:#C49A2A;
+  --gold2:#DDB94A;
+  --steel:#6B8AA8;
+  --light:#B8CDD8;
+  --white:#F0F4F8;
+  --text:#D0DCE8;
+  --muted:#7A92A8;
+  --border:rgba(108,160,200,0.15);
+  --border2:rgba(232,96,28,0.25);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--navy);
+  color:var(--text);
+  font-family:'DM Sans',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ── SCROLLBAR ─────────────────────────── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-thumb{background:var(--orange);border-radius:2px}
+
+/* ── NAV ───────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 60px;
+  background:rgba(8,14,26,0.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  transition:padding .3s;
+}
+nav.scrolled{padding:12px 60px}
+.nav-logo{
+  display:inline-flex;align-items:center;
+  text-decoration:none;
+  transition:opacity .2s;
+}
+.nav-logo:hover{opacity:0.85}
+.nav-logo img{height:40px;width:auto;display:block}
+@media(max-width:600px){
+  .nav-logo img{height:34px}
+}
+.nav-links{display:flex;gap:36px;list-style:none;align-items:center}
+.nav-links > li{position:relative}
+.nav-links a,.nav-links button.dropdown-toggle{
+  color:var(--muted);
+  text-decoration:none;
+  background:none;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  transition:color .2s;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.nav-links a:hover,.nav-links button.dropdown-toggle:hover{color:var(--orange)}
+.dropdown-toggle .caret{font-size:9px;transition:transform .2s}
+.nav-links li.open .dropdown-toggle .caret{transform:rotate(180deg)}
+
+/* Dropdown menu — right-aligned since it's the last nav item */
+.dropdown-menu{
+  position:absolute;top:calc(100% + 14px);right:0;left:auto;
+  transform:translateY(-8px);
+  background:rgba(13,22,35,0.97);backdrop-filter:blur(14px);
+  border:1px solid var(--border);border-radius:8px;
+  padding:8px;min-width:240px;
+  list-style:none;
+  box-shadow:0 12px 32px rgba(0,0,0,0.5);
+  opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .2s;
+}
+.nav-links li.open .dropdown-menu{
+  opacity:1;pointer-events:auto;
+  transform:translateY(0);
+}
+.dropdown-menu li{border-radius:4px}
+.dropdown-menu a{
+  display:block;padding:10px 14px;
+  font-size:13px;font-weight:500;
+  letter-spacing:0.5px;text-transform:none;
+  color:var(--light);text-align:left;
+  border-radius:4px;
+  transition:background .15s,color .15s;
+}
+.dropdown-menu a:hover{background:rgba(232,96,28,0.08);color:var(--orange)}
+.dropdown-menu .dm-label{
+  font-size:9px;color:var(--muted);letter-spacing:1.5px;
+  text-transform:uppercase;padding:0 14px 6px;display:block;
+}
+.dropdown-menu .dm-divider{height:1px;background:var(--border);margin:6px 0}
+.dropdown-menu .dm-status{
+  font-size:9px;color:var(--muted);letter-spacing:1px;
+  text-transform:uppercase;margin-left:8px;
+  padding:1px 6px;border-radius:4px;
+  background:rgba(108,160,200,0.1);
+}
+.dropdown-menu .dm-status.live{color:#60C878;background:rgba(80,200,120,0.1)}
+.dropdown-menu .dm-status.soon{color:var(--orange2);background:rgba(232,96,28,0.1)}
+
+/* Mobile menu sub-items (used in mobile-menu) */
+.mobile-menu-links .mm-section{
+  color:var(--muted);font-size:11px;letter-spacing:2px;
+  margin-top:8px;padding:12px 16px 4px;display:block;
+  text-transform:uppercase;
+}
+.mobile-menu-links .mm-sub{
+  padding-left:32px;font-size:13px;letter-spacing:0.8px;text-transform:none;
+}
+
+/* View All Portfolio link in featured section */
+.view-all-portfolio{
+  display:flex;justify-content:center;margin-top:36px;
+}
+.view-all-portfolio a{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 28px;border:1px solid var(--border2);
+  border-radius:6px;
+  color:var(--orange);text-decoration:none;
+  font-size:13px;font-weight:500;
+  letter-spacing:1.5px;text-transform:uppercase;
+  transition:background .2s,transform .15s;
+}
+.view-all-portfolio a:hover{background:rgba(232,96,28,0.06);transform:translateY(-2px)}
+.view-all-portfolio a .arrow{transition:transform .25s ease}
+.view-all-portfolio a:hover .arrow{transform:translateX(4px)}
+.nav-cta{
+  background:var(--orange);
+  color:#fff;
+  padding:8px 20px;
+  border-radius:4px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:background .2s,transform .1s;
+}
+.nav-cta:hover{background:var(--orange2);transform:translateY(-1px)}
+
+/* ── HAMBURGER TOGGLE ─────────────────── */
+.nav-toggle{
+  display:none;
+  background:transparent;border:none;
+  cursor:pointer;
+  width:32px;height:32px;
+  flex-direction:column;justify-content:center;align-items:center;
+  gap:5px;
+  padding:0;
+  margin-left:12px;
+}
+.nav-toggle span{
+  display:block;
+  width:22px;height:2px;
+  background:var(--white);
+  border-radius:2px;
+  transition:transform .3s,opacity .2s;
+}
+.nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.active span:nth-child(2){opacity:0}
+.nav-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ── MOBILE MENU PANEL ─────────────────── */
+.mobile-menu{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(8,14,26,0.98);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  padding:80px 24px 32px;
+  z-index:90;
+  transform:translateY(-100%);
+  transition:transform .35s ease;
+  pointer-events:none;
+}
+.mobile-menu.open{
+  transform:translateY(0);
+  pointer-events:auto;
+}
+.mobile-menu-links{list-style:none;display:flex;flex-direction:column;gap:4px}
+.mobile-menu-links a{
+  display:block;
+  padding:14px 16px;
+  color:var(--light);
+  text-decoration:none;
+  font-size:15px;font-weight:500;
+  letter-spacing:1.5px;text-transform:uppercase;
+  border-left:2px solid transparent;
+  transition:color .2s,border-color .2s,background .2s;
+}
+.mobile-menu-links a:hover,.mobile-menu-links a:active{
+  color:var(--orange);
+  border-left-color:var(--orange);
+  background:rgba(232,96,28,0.05);
+}
+
+/* ── HERO ──────────────────────────────── */
+#hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:120px 60px 80px;
+  overflow:hidden;
+}
+#hero-canvas{
+  position:absolute;inset:0;
+  pointer-events:none;
+}
+.hero-bg-gradient{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 60% 50%, rgba(232,96,28,0.06) 0%, transparent 70%),
+             radial-gradient(ellipse 60% 40% at 20% 80%, rgba(20,40,70,0.4) 0%, transparent 60%);
+  pointer-events:none;
+}
+.hero-content{position:relative;z-index:1;max-width:800px}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:11px;font-weight:500;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--orange);
+  margin-bottom:28px;
+}
+.hero-eyebrow::before{
+  content:'';display:block;
+  width:32px;height:1px;
+  background:var(--orange);
+}
+.hero-name{
+  font-family:'Syne',sans-serif;
+  font-weight:800;
+  font-size:clamp(52px,7vw,88px);
+  color:var(--white);
+  line-height:1.0;
+  letter-spacing:-2px;
+  margin-bottom:20px;
+}
+.hero-name span{color:var(--orange)}
+.hero-tagline{
+  font-size:clamp(18px,2.5vw,24px);
+  font-weight:300;
+  color:var(--light);
+  margin-bottom:14px;
+  min-height:36px;
+}
+.hero-tagline .typed{color:var(--orange2);font-weight:500}
+.hero-tagline .cursor{
+  display:inline-block;
+  width:2px;height:1em;
+  background:var(--orange);
+  margin-left:2px;
+  vertical-align:middle;
+  animation:blink 1s step-end infinite;
+}
+@keyframes blink{50%{opacity:0}}
+.hero-sub{
+  font-size:15px;
+  color:var(--muted);
+  max-width:560px;
+  margin-bottom:48px;
+  line-height:1.7;
+}
+.hero-sub strong{color:var(--light);font-weight:400}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{
+  display:inline-block;
+  background:var(--orange);
+  color:#fff;
+  padding:14px 32px;
+  border-radius:4px;
+  text-decoration:none;
+  font-weight:500;
+  font-size:14px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:background .2s,transform .15s;
+}
+.btn-primary:hover{background:var(--orange2);transform:translateY(-2px)}
+.btn-outline{
+  display:inline-block;
+  border:1px solid var(--border2);
+  color:var(--light);
+  padding:14px 32px;
+  border-radius:4px;
+  text-decoration:none;
+  font-weight:400;
+  font-size:14px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:border-color .2s,color .2s,transform .15s;
+}
+.btn-outline:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-2px)}
+.hero-scroll-hint{
+  position:absolute;bottom:36px;left:60px;
+  display:flex;align-items:center;gap:10px;
+  font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);
+  animation:float 2.5s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+.scroll-dot{
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--orange);
+}
+
+/* ── SECTION SHARED ────────────────────── */
+section{padding:100px 60px}
+.section-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:11px;font-weight:500;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--orange);margin-bottom:16px;
+}
+.section-eyebrow::before{
+  content:'';display:block;
+  width:24px;height:1px;
+  background:var(--orange);
+}
+.section-title{
+  font-family:'Syne',sans-serif;
+  font-weight:700;
+  font-size:clamp(32px,4vw,48px);
+  color:var(--white);
+  line-height:1.1;
+  letter-spacing:-1px;
+  margin-bottom:16px;
+}
+.section-subtitle{
+  font-size:15px;color:var(--muted);
+  max-width:580px;line-height:1.7;
+  margin-bottom:60px;
+}
+
+/* reveal animation */
+.reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+/* ── ABOUT ─────────────────────────────── */
+#about{background:var(--dark)}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.about-text p{
+  font-size:15px;color:var(--text);
+  line-height:1.8;margin-bottom:20px;
+}
+.about-text p strong{color:var(--orange2);font-weight:500}
+.about-stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin-top:40px;
+}
+.stat-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:24px;
+}
+.stat-num{
+  font-family:'Syne',sans-serif;
+  font-size:36px;font-weight:800;
+  color:var(--orange);line-height:1;
+  margin-bottom:6px;
+}
+.stat-label{font-size:12px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.about-visual{
+  position:relative;
+}
+.about-card-stack{position:relative;height:460px}
+.about-card{
+  position:absolute;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:28px;
+}
+.about-card:nth-child(1){
+  width:80%;top:0;left:0;
+  border-left:3px solid var(--orange);
+}
+.about-card:nth-child(2){
+  width:75%;top:140px;right:0;
+  border-left:3px solid var(--gold);
+}
+.about-card:nth-child(3){
+  width:78%;bottom:0;left:10%;
+  border-left:3px solid var(--steel);
+}
+.card-label{
+  font-size:10px;font-weight:600;
+  letter-spacing:2.5px;text-transform:uppercase;
+  margin-bottom:10px;
+}
+.about-card:nth-child(1) .card-label{color:var(--orange)}
+.about-card:nth-child(2) .card-label{color:var(--gold)}
+.about-card:nth-child(3) .card-label{color:var(--steel)}
+.card-text{font-size:13.5px;color:var(--light);line-height:1.6}
+
+/* ── SKILLS ────────────────────────────── */
+#skills{background:var(--navy)}
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
+.skill-category{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:32px;
+  transition:border-color .3s,transform .3s;
+}
+.skill-category:hover{
+  border-color:var(--border2);
+  transform:translateY(-4px);
+}
+.skill-cat-icon{
+  width:44px;height:44px;
+  background:rgba(232,96,28,0.1);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--orange);
+  margin-bottom:18px;
+  padding:10px;
+}
+.skill-cat-icon svg{width:100%;height:100%;display:block}
+.skill-cat-title{
+  font-family:'Syne',sans-serif;
+  font-weight:700;font-size:17px;
+  color:var(--white);margin-bottom:20px;
+}
+.skill-bar-item{margin-bottom:14px}
+.skill-bar-label{
+  display:flex;justify-content:space-between;
+  font-size:13px;color:var(--light);
+  margin-bottom:5px;
+}
+.skill-bar-label span{color:var(--muted);font-size:12px}
+.bar-track{
+  height:3px;background:rgba(255,255,255,0.06);
+  border-radius:2px;overflow:hidden;
+}
+.bar-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--orange),var(--orange2));
+  border-radius:2px;
+  width:0;
+  transition:width 1.2s ease;
+}
+.bar-fill.gold{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.bar-fill.steel{background:linear-gradient(90deg,#4A7A9B,#6BA3C8)}
+
+/* ── EXPERIENCE ────────────────────────── */
+#experience{background:var(--dark)}
+.exp-container{display:grid;grid-template-columns:1fr 2fr;gap:60px}
+.exp-tabs{display:flex;flex-direction:column;gap:4px}
+.exp-tab{
+  padding:14px 20px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:13px;font-weight:500;
+  color:var(--muted);
+  border-left:2px solid transparent;
+  transition:all .2s;
+  text-align:left;
+  background:transparent;
+  border-top:none;border-right:none;border-bottom:none;
+}
+.exp-tab:hover{color:var(--light);background:var(--card)}
+.exp-tab.active{
+  color:var(--orange);
+  background:rgba(232,96,28,0.06);
+  border-left-color:var(--orange);
+}
+.exp-tab .tab-company{display:block;font-size:11px;color:var(--muted);margin-top:2px;font-weight:400}
+.exp-tab.active .tab-company{color:rgba(232,96,28,0.6)}
+.exp-panel{display:none}
+.exp-panel.active{display:block}
+.exp-panel-dates{
+  font-size:12px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--orange);margin-bottom:8px;
+}
+.exp-panel-title{
+  font-family:'Syne',sans-serif;
+  font-size:22px;font-weight:700;
+  color:var(--white);margin-bottom:4px;
+}
+.exp-panel-company{
+  font-size:14px;color:var(--muted);margin-bottom:24px;
+}
+.exp-bullets{list-style:none}
+.exp-bullets li{
+  position:relative;
+  padding-left:20px;
+  margin-bottom:12px;
+  font-size:14px;color:var(--text);
+  line-height:1.6;
+}
+.exp-bullets li::before{
+  content:'▸';
+  position:absolute;left:0;
+  color:var(--orange);font-size:11px;top:3px;
+}
+
+/* ── PORTFOLIO ─────────────────────────── */
+#portfolio{background:var(--navy)}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:24px;
+}
+.portfolio-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  transition:border-color .3s,transform .3s,box-shadow .3s;
+  position:relative;
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+.portfolio-card:hover{
+  border-color:var(--border2);
+  transform:translateY(-6px);
+  box-shadow:0 12px 32px rgba(0,0,0,0.4);
+}
+.portfolio-card:hover .port-cta{color:var(--orange2)}
+.portfolio-card:hover .port-cta .arrow{transform:translateX(4px)}
+.port-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:18px;
+  font-size:11px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--orange);
+  transition:color .2s;
+}
+.port-cta .arrow{
+  display:inline-block;
+  transition:transform .25s ease;
+}
+.portfolio-card-header{
+  padding:32px 32px 0;
+  height:140px;
+  display:flex;align-items:flex-start;
+  position:relative;
+  overflow:hidden;
+}
+.port-bg-1{background:linear-gradient(135deg,rgba(232,96,28,0.12),rgba(240,112,48,0.04))}
+.port-bg-2{background:linear-gradient(135deg,rgba(196,154,42,0.12),rgba(221,185,74,0.04))}
+.port-bg-3{background:linear-gradient(135deg,rgba(30,60,100,0.3),rgba(20,40,80,0.1))}
+.port-icon{
+  width:42px;height:42px;
+  color:var(--orange);
+}
+.port-icon svg{width:100%;height:100%;display:block}
+.port-icon.uz{color:#7FCBE2}
+.port-badge{
+  position:absolute;top:16px;right:16px;
+  font-size:10px;font-weight:600;
+  letter-spacing:1.5px;text-transform:uppercase;
+  padding:4px 10px;border-radius:20px;
+}
+.badge-live{background:rgba(80,200,120,0.15);color:#60C878}
+.badge-dev{background:rgba(232,96,28,0.15);color:var(--orange2)}
+.badge-legacy{background:rgba(107,138,168,0.15);color:var(--steel)}
+.portfolio-card-body{padding:24px 32px 32px}
+.port-title{
+  font-family:'Syne',sans-serif;
+  font-size:20px;font-weight:700;
+  color:var(--white);margin-bottom:4px;
+}
+.port-subtitle{font-size:12px;color:var(--muted);margin-bottom:14px;letter-spacing:1px;text-transform:uppercase}
+.port-desc{font-size:13.5px;color:var(--text);line-height:1.7;margin-bottom:20px}
+.port-tags{display:flex;flex-wrap:wrap;gap:8px}
+.port-tag{
+  font-size:11px;
+  padding:4px 10px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  color:var(--muted);
+  letter-spacing:0.5px;
+}
+
+/* ── AI SECTION ────────────────────────── */
+#ai-advantage{
+  background:var(--dark);
+  position:relative;overflow:hidden;
+}
+#ai-advantage::before{
+  content:'';
+  position:absolute;
+  top:-100px;right:-100px;
+  width:500px;height:500px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(232,96,28,0.04) 0%,transparent 70%);
+  pointer-events:none;
+}
+.ai-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.ai-text p{
+  font-size:15px;color:var(--text);
+  line-height:1.8;margin-bottom:20px;
+}
+.ai-text p strong{color:var(--orange2);font-weight:500}
+.ai-tools{margin-top:40px}
+.ai-tools-title{
+  font-size:11px;font-weight:600;
+  letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:16px;
+}
+.ai-tool-list{display:flex;flex-wrap:wrap;gap:10px}
+.ai-tool{
+  display:flex;align-items:center;gap:8px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:8px 14px;
+  font-size:13px;color:var(--light);
+  transition:border-color .2s;
+}
+.ai-tool:hover{border-color:var(--orange)}
+.ai-tool::before{
+  content:'';display:block;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--orange);flex-shrink:0;
+}
+.ai-visual{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.ai-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:24px;
+  transition:border-color .2s,transform .2s;
+}
+.ai-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.ai-card:first-child{
+  grid-column:1/-1;
+  background:rgba(232,96,28,0.06);
+  border-color:var(--border2);
+}
+.ai-card-icon{width:28px;height:28px;color:var(--orange);margin-bottom:12px}
+.ai-card-icon svg{width:100%;height:100%;display:block}
+.ai-card-title{
+  font-family:'Syne',sans-serif;
+  font-size:15px;font-weight:700;
+  color:var(--white);margin-bottom:6px;
+}
+.ai-card-text{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* ── CONTACT ───────────────────────────── */
+#contact{
+  background:var(--navy);
+  text-align:center;
+  padding:120px 60px;
+}
+.contact-inner{max-width:600px;margin:0 auto}
+.contact-sub{
+  font-size:15px;color:var(--muted);
+  line-height:1.7;margin-bottom:48px;
+}
+.contact-methods{
+  display:flex;justify-content:center;gap:20px;
+  flex-wrap:wrap;margin-bottom:60px;
+}
+.contact-method{
+  display:flex;align-items:center;gap:10px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:16px 24px;
+  text-decoration:none;
+  color:var(--light);
+  font-size:14px;
+  transition:border-color .2s,color .2s;
+}
+.contact-method:hover{border-color:var(--orange);color:var(--orange)}
+.contact-method-icon{width:18px;height:18px;color:var(--orange);display:inline-flex;align-items:center}
+.contact-method-icon svg{width:100%;height:100%;display:block}
+
+/* ── BACK TO TOP BUTTON ────────────────── */
+.back-to-top{
+  position:fixed;bottom:24px;right:24px;z-index:80;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--orange);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;border:none;
+  box-shadow:0 8px 24px rgba(232,96,28,0.35),0 2px 8px rgba(0,0,0,0.4);
+  opacity:0;transform:translateY(80px) scale(0.9);
+  transition:opacity .3s,transform .3s,background .2s;
+  pointer-events:none;
+}
+.back-to-top.visible{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.back-to-top:hover{background:var(--orange2);transform:translateY(-2px) scale(1)}
+.back-to-top svg{width:20px;height:20px;display:block}
+@media(max-width:600px){
+  .back-to-top{bottom:16px;right:16px;width:40px;height:40px}
+  .back-to-top svg{width:18px;height:18px}
+}
+
+/* ── FOOTER ────────────────────────────── */
+footer{
+  background:var(--dark);
+  border-top:1px solid var(--border);
+  padding:24px 60px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.footer-left{font-size:13px;color:var(--muted)}
+.footer-right{
+  font-size:11px;color:var(--muted);
+  letter-spacing:1px;text-transform:uppercase;
+}
+.footer-right span{color:var(--orange)}
+
+/* ── DIVIDER ───────────────────────────── */
+.divider{
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--border),transparent);
+  margin:0 60px;
+}
+
+@media(max-width:900px){
+  nav{padding:16px 24px}
+  nav.scrolled{padding:12px 24px}
+  .nav-links{display:none}
+  .nav-toggle{display:flex}
+  .nav-cta{padding:7px 14px;font-size:11px;letter-spacing:0.8px}
+  section{padding:72px 24px}
+  #hero{padding:100px 24px 80px;min-height:auto}
+  .hero-scroll-hint{left:24px;bottom:24px}
+  .about-grid,.ai-grid,.exp-container{grid-template-columns:1fr;gap:40px}
+  /* About card stack: switch from absolute to natural vertical stack on mobile */
+  .about-card-stack{height:auto;display:flex;flex-direction:column;gap:14px}
+  .about-card,
+  .about-card:nth-child(1),
+  .about-card:nth-child(2),
+  .about-card:nth-child(3){
+    position:relative;
+    width:100%;
+    top:auto;bottom:auto;left:auto;right:auto;
+  }
+  .ai-visual{grid-template-columns:1fr}
+  .ai-card:first-child{grid-column:auto}
+  /* Experience tabs: horizontal scroll on mobile so they don't cramp */
+  .exp-tabs{
+    flex-direction:row;
+    overflow-x:auto;
+    gap:6px;
+    padding-bottom:8px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .exp-tabs::-webkit-scrollbar{display:none}
+  .exp-tab{flex:0 0 auto;white-space:nowrap;border-left:none;border-bottom:2px solid transparent}
+  .exp-tab.active{border-left-color:transparent;border-bottom-color:var(--orange)}
+  .about-stats{grid-template-columns:1fr 1fr;gap:14px}
+  .stat-card{padding:18px}
+  .stat-num{font-size:30px}
+  footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center}
+  .divider{margin:0 24px}
+  #contact{padding:80px 24px}
+}
+@media(max-width:600px){
+  .hero-name{font-size:46px;letter-spacing:-1.5px;line-height:1.05}
+  .hero-eyebrow{font-size:10px;letter-spacing:2px}
+  .hero-tagline{font-size:17px}
+  .hero-sub{font-size:14px}
+  .section-title{font-size:30px;letter-spacing:-0.5px}
+}
+@media(max-width:480px){
+  #hero{padding:90px 20px 60px}
+  section{padding:60px 20px}
+  .hero-name{font-size:40px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline{text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════ -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo" aria-label="Brandon Guzzardo — Home"><img src="images/brand-logo.png" alt="Brandon Guzzardo"></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#ai-advantage">AI Edge</a></li>
+    <li class="has-dropdown">
+      <button class="dropdown-toggle" aria-expanded="false">Portfolio of Work <span class="caret">▾</span></button>
+      <ul class="dropdown-menu">
+        <li><span class="dm-label">Case Studies</span></li>
+        <li><a href="unzipped-live.html">Unzipped Live <span class="dm-status live">Live</span></a></li>
+        <li><a href="coming-soon.html?brand=bizy-bz">Bizy Bz Buzzar <span class="dm-status soon">Soon</span></a></li>
+        <li><a href="coming-soon.html?brand=blueprint">Blueprint Branding <span class="dm-status soon">Soon</span></a></li>
+        <li><a href="coming-soon.html?brand=roam-fetch">Roam &amp; Fetch <span class="dm-status soon">Soon</span></a></li>
+        <li class="dm-divider"></li>
+        <li><a href="portfolio.html">View All →</a></li>
+      </ul>
+    </li>
+  </ul>
+  <a href="#contact" class="nav-cta">Let's Talk</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ BACK TO TOP ══════════════════════════ -->
+<button class="back-to-top" id="back-to-top" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<!-- ══ MOBILE MENU PANEL ════════════════════ -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#ai-advantage">AI Edge</a></li>
+    <li><span class="mm-section">Portfolio of Work</span></li>
+    <li><a class="mm-sub" href="unzipped-live.html">Unzipped Live</a></li>
+    <li><a class="mm-sub" href="coming-soon.html?brand=bizy-bz">Bizy Bz Buzzar</a></li>
+    <li><a class="mm-sub" href="coming-soon.html?brand=blueprint">Blueprint Branding</a></li>
+    <li><a class="mm-sub" href="coming-soon.html?brand=roam-fetch">Roam &amp; Fetch</a></li>
+    <li><a class="mm-sub" href="portfolio.html">View All →</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+
+<!-- ══ HERO ═════════════════════════════════ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-bg-gradient"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Digital Brand Builder &amp; E-Commerce Operator</div>
+    <h1 class="hero-name">Brandon<br><span>Guzzardo</span></h1>
+    <p class="hero-tagline">
+      I build <span class="typed" id="typed-text"></span><span class="cursor"></span>
+    </p>
+    <p class="hero-sub">
+      15+ years of <strong>real-world experience</strong> across e-commerce, brand development, 
+      digital marketing, and operations — now supercharged with <strong>AI-powered workflows</strong> 
+      that multiply output and accelerate results.
+    </p>
+    <div class="hero-actions">
+      <a href="portfolio.html" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-dot"></div>
+    Scroll to explore
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ ABOUT ════════════════════════════════ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <div class="section-eyebrow">About Me</div>
+      <h2 class="section-title">Built Different.<br>From Day One.</h2>
+      <p>I didn't come up through a marketing department or a design school. I built brands, ran businesses, managed teams, and figured out digital marketing the hard way — by doing it, failing at it, and doing it better.</p>
+      <p>From launching a <strong>multi-platform e-commerce brand</strong> that hit $4,200+/month in profit, to developing brand identities for real clients, to leading teams in fast-paced retail environments — my background is unusually wide, and that's the point.</p>
+      <p>Today I combine that foundation with <strong>AI tools, automation platforms, and digital strategy</strong> to build and operate at a level that used to require a whole team.</p>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Platforms Operated</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">$4.2K</div>
+          <div class="stat-label">Monthly E-Com Peak</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Ideas In The Pipeline</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual reveal reveal-delay-2">
+      <div class="about-card-stack">
+        <div class="about-card">
+          <div class="card-label">Entrepreneurship</div>
+          <div class="card-text">Built and operated multiple self-funded ventures — e-commerce, branding, digital marketing. No investors, no safety net. Just results.</div>
+        </div>
+        <div class="about-card">
+          <div class="card-label">Digital Native (Before It Was Cool)</div>
+          <div class="card-text">Learning SEO, brand strategy, and platform operations long before "digital marketing" was a standard job title.</div>
+        </div>
+        <div class="about-card">
+          <div class="card-label">AI-Augmented Professional</div>
+          <div class="card-text">Leveraging Claude, Make.com, Replit, and automation workflows to work smarter — building AI agent stacks and content pipelines that scale without headcount.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ SKILLS ════════════════════════════════ -->
+<section id="skills">
+  <div class="reveal">
+    <div class="section-eyebrow">What I Bring</div>
+    <h2 class="section-title">Skills & Expertise</h2>
+    <p class="section-subtitle">A rare combination of hands-on digital experience, brand instinct, and modern AI capabilities.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-category reveal reveal-delay-1">
+      <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h2.5l2.4 12h12.8l2.3-9H6.4"/><circle cx="9.5" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg></div>
+      <div class="skill-cat-title">E-Commerce & Marketplaces</div>
+      <div class="skill-bar-item"><div class="skill-bar-label">eBay Seller Hub<span>Expert</span></div><div class="bar-track"><div class="bar-fill" data-width="92"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Amazon Seller Central<span>Proficient</span></div><div class="bar-track"><div class="bar-fill" data-width="76"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Shopify<span>Proficient</span></div><div class="bar-track"><div class="bar-fill" data-width="78"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Multi-Platform Ops<span>Expert</span></div><div class="bar-track"><div class="bar-fill" data-width="90"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Listing Optimization<span>Expert</span></div><div class="bar-track"><div class="bar-fill" data-width="88"></div></div></div>
+    </div>
+    <div class="skill-category reveal reveal-delay-2">
+      <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c1 0 1.8-.8 1.8-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.8-.5-1.2 0-1 .8-1.8 1.8-1.8H17c2.8 0 5-2.2 5-5 0-5-4.5-9-10-9z"/><circle cx="7" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="11" cy="7" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="9" r="1" fill="currentColor" stroke="none"/></svg></div>
+      <div class="skill-cat-title">Branding & Design</div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Brand Identity<span>Expert</span></div><div class="bar-track"><div class="bar-fill gold" data-width="88"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Graphic Design<span>Proficient</span></div><div class="bar-track"><div class="bar-fill gold" data-width="80"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Visual Storytelling<span>Expert</span></div><div class="bar-track"><div class="bar-fill gold" data-width="85"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Product Photography<span>Proficient</span></div><div class="bar-track"><div class="bar-fill gold" data-width="75"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Campaign Design<span>Proficient</span></div><div class="bar-track"><div class="bar-fill gold" data-width="78"></div></div></div>
+    </div>
+    <div class="skill-category reveal reveal-delay-3">
+      <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a2 2 0 0 0 2 2h2l5 4V5L7 9H5a2 2 0 0 0-2 2z"/><path d="M15 8a4 4 0 0 1 0 8"/><path d="M18.5 5a8 8 0 0 1 0 14"/></svg></div>
+      <div class="skill-cat-title">Marketing & Content</div>
+      <div class="skill-bar-item"><div class="skill-bar-label">SEO & Keywords<span>Expert</span></div><div class="bar-track"><div class="bar-fill" data-width="86"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Content Strategy<span>Proficient</span></div><div class="bar-track"><div class="bar-fill" data-width="80"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Social Media<span>Proficient</span></div><div class="bar-track"><div class="bar-fill" data-width="77"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Copywriting<span>Proficient</span></div><div class="bar-track"><div class="bar-fill" data-width="82"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Digital Advertising<span>Developing</span></div><div class="bar-track"><div class="bar-fill" data-width="65"></div></div></div>
+    </div>
+    <div class="skill-category reveal reveal-delay-4">
+      <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><line x1="12" y1="4" x2="12" y2="8"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/><circle cx="9" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r="1.2" fill="currentColor" stroke="none"/><line x1="9" y1="17" x2="15" y2="17"/></svg></div>
+      <div class="skill-cat-title">AI & Technology</div>
+      <div class="skill-bar-item"><div class="skill-bar-label">AI Workflow Design<span>Expert</span></div><div class="bar-track"><div class="bar-fill steel" data-width="88"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Automation (Make.com)<span>Proficient</span></div><div class="bar-track"><div class="bar-fill steel" data-width="74"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Prompt Engineering<span>Expert</span></div><div class="bar-track"><div class="bar-fill steel" data-width="90"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Google Workspace<span>Expert</span></div><div class="bar-track"><div class="bar-fill steel" data-width="86"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-label">Replit / No-Code<span>Proficient</span></div><div class="bar-track"><div class="bar-fill steel" data-width="72"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ EXPERIENCE ════════════════════════════ -->
+<section id="experience">
+  <div class="reveal">
+    <div class="section-eyebrow">Work History</div>
+    <h2 class="section-title">The Career Behind<br>The Skills</h2>
+    <p class="section-subtitle">Click through to see what each role actually built in me.</p>
+  </div>
+  <div class="exp-container reveal reveal-delay-1">
+    <div class="exp-tabs">
+      <button class="exp-tab active" data-panel="bizy">
+        Bizy Bz Buzzar
+        <span class="tab-company">2017 – 2020</span>
+      </button>
+      <button class="exp-tab" data-panel="blueprint">
+        Blueprint Branding
+        <span class="tab-company">2015 – 2018</span>
+      </button>
+      <button class="exp-tab" data-panel="verizon">
+        Cellular Sales / Verizon
+        <span class="tab-company">2022 – 2024</span>
+      </button>
+      <button class="exp-tab" data-panel="ikon">
+        IKON Transportation
+        <span class="tab-company">2025</span>
+      </button>
+      <button class="exp-tab" data-panel="hd">
+        The Home Depot
+        <span class="tab-company">2025 – Present</span>
+      </button>
+      <button class="exp-tab" data-panel="menards">
+        Menards
+        <span class="tab-company">2006 – 2012</span>
+      </button>
+    </div>
+    <div class="exp-panels">
+      <div class="exp-panel active" id="panel-bizy">
+        <div class="exp-panel-dates">May 2017 – May 2020</div>
+        <div class="exp-panel-title">Co-Founder &amp; E-Commerce Operator</div>
+        <div class="exp-panel-company">Bizy Bz Buzzar — Roscoe, IL</div>
+        <ul class="exp-bullets">
+          <li>Built a self-funded multi-platform resale brand from zero — started on eBay, expanded to Amazon, Etsy, Facebook Marketplace, Craigslist, and more.</li>
+          <li>Managed every element of the operation: product sourcing, photography, SEO-optimized listing creation, pricing strategy, inventory, and customer service.</li>
+          <li>Averaged $4,200+/month in net profit at peak — through smart sourcing, platform-specific strategy, and tight operations.</li>
+          <li>Designed original brand identity including logo, visual system, and platform voice — all in-house.</li>
+          <li>Maintained strong seller metrics across all platforms, including account health, seller ratings, and dispute resolution.</li>
+        </ul>
+      </div>
+      <div class="exp-panel" id="panel-blueprint">
+        <div class="exp-panel-dates">May 2015 – July 2018</div>
+        <div class="exp-panel-title">Founder — Brand Developer &amp; Digital Marketer</div>
+        <div class="exp-panel-company">Blueprint Branding / Prime Collective — Janesville, WI / La Veta, CO</div>
+        <ul class="exp-bullets">
+          <li>Founded and operated a digital marketing and branding agency — serving small businesses with brand identity, SEO, social media strategy, and content creation.</li>
+          <li>Developed visual identities, messaging frameworks, and digital presence strategies tailored to each client's target audience.</li>
+          <li>Coordinated white-label services across a creative network — managed client expectations, timelines, and deliverable quality.</li>
+          <li>Operated remotely from Colorado while maintaining a full client roster — early experience with distributed, digital-first work.</li>
+        </ul>
+      </div>
+      <div class="exp-panel" id="panel-verizon">
+        <div class="exp-panel-dates">July 2022 – April 2024</div>
+        <div class="exp-panel-title">Sales Representative &amp; Account Analyst</div>
+        <div class="exp-panel-company">Cellular Sales / Verizon — Wisconsin</div>
+        <ul class="exp-bullets">
+          <li>100% commission-based environment — every transaction required precise documentation, account analysis, and zero-error follow-through.</li>
+          <li>Conducted full-store inventory before open daily; maintained meticulous records across multiple back-end systems.</li>
+          <li>Built customer relationships through consultative selling — identifying needs, solving problems, and communicating complex products in plain language.</li>
+          <li>Developed disciplined process habits in a high-stakes environment where mistakes came directly out of your own paycheck.</li>
+        </ul>
+      </div>
+      <div class="exp-panel" id="panel-ikon">
+        <div class="exp-panel-dates">January 2025 – May 2025</div>
+        <div class="exp-panel-title">Military Freight Broker</div>
+        <div class="exp-panel-company">IKON Transportation — Wisconsin</div>
+        <ul class="exp-bullets">
+          <li>Managed DOD freight contracts across all major military branches — bidding loads, contracting third-party carriers, and ensuring full federal compliance.</li>
+          <li>Served as 24/7 point of contact for active loads — resolved in-transit issues in real time with zero tolerance for error or delay.</li>
+          <li>Ensured all carriers met government requirements: certifications, safety documentation, routing compliance, and security protocols.</li>
+          <li>Position eliminated company-wide due to federal contract consolidation — all DOD freight brokering moved in-house by government directive. 17 brokers affected.</li>
+        </ul>
+      </div>
+      <div class="exp-panel" id="panel-hd">
+        <div class="exp-panel-dates">October 2025 – Present</div>
+        <div class="exp-panel-title">Lead — Overnight Garden Recovery &amp; Flooring Specialist</div>
+        <div class="exp-panel-company">The Home Depot — Wisconsin</div>
+        <ul class="exp-bullets">
+          <li>Promoted to Lead of a newly created 5-person Overnight Garden Recovery team — a seasonal mid-level management role built to address critical inventory and merchandising challenges.</li>
+          <li>Divided team into two concurrent workstreams: product receiving/staging and existing inventory cleanup/planogram reset.</li>
+          <li>Transformed a disorganized department — corrected inaccurate tags, reconciled inventory, reset shelving, and established sustainable overstock rotation systems.</li>
+          <li>Established clear role assignments and performance-based expectations — team operates independently without constant direction.</li>
+        </ul>
+      </div>
+      <div class="exp-panel" id="panel-menards">
+        <div class="exp-panel-dates">October 2006 – April 2012</div>
+        <div class="exp-panel-title">Department Manager — Cabinets &amp; Appliances</div>
+        <div class="exp-panel-company">Menards Home Improvement — Janesville / Beloit, WI</div>
+        <ul class="exp-bullets">
+          <li>Managed full department operations for 5+ years — team scheduling, payroll, inventory management, and sales performance.</li>
+          <li>Certified in 20/20 CAD kitchen design software — created visual design renderings and full project specs for customer remodeling projects.</li>
+          <li>Consistently exceeded sales targets while maintaining department standards and team performance metrics.</li>
+          <li>Developed team management fundamentals that have carried through every leadership role since.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ FEATURED WORK ═════════════════════════ -->
+<section id="portfolio">
+  <div class="reveal">
+    <div class="section-eyebrow">Featured Work</div>
+    <h2 class="section-title">Built, Launched,<br>&amp; Operated</h2>
+    <p class="section-subtitle">A selection of the work — brand identity case studies, e-commerce ventures, and active builds. Click any card to dig in.</p>
+  </div>
+  <div class="portfolio-grid">
+    <a href="unzipped-live.html" class="portfolio-card reveal reveal-delay-1">
+      <div class="portfolio-card-header" style="background:linear-gradient(135deg,rgba(127,203,226,0.16),rgba(127,203,226,0.04))">
+        <div class="port-icon uz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.3 7.3L3 21l1.7-6.7A8 8 0 1 1 21 12z"/><circle cx="8" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="12" r="1" fill="currentColor" stroke="none"/></svg></div>
+        <div class="port-badge badge-live">Case Study Live</div>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="port-title">Unzipped Live</div>
+        <div class="port-subtitle">Podcast Brand Identity · Client Project</div>
+        <div class="port-desc">A complete brand identity for a podcast pulling back the curtain on high-performing entrepreneurs. From a weird metaphor to a unified mark — plus an extended sub-brand for content production.</div>
+        <div class="port-tags">
+          <span class="port-tag">Logo Design</span>
+          <span class="port-tag">Naming</span>
+          <span class="port-tag">Brand System</span>
+          <span class="port-tag">Sub-Brand</span>
+        </div>
+        <div class="port-cta">Read Case Study <span class="arrow">→</span></div>
+      </div>
+    </a>
+    <a href="coming-soon.html?brand=bizy-bz" class="portfolio-card reveal reveal-delay-2">
+      <div class="portfolio-card-header port-bg-1">
+        <div class="port-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h2.5l2.4 12h12.8l2.3-9H6.4"/><circle cx="9.5" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg></div>
+        <div class="port-badge badge-legacy">Completed</div>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="port-title">Bizy Bz Buzzar</div>
+        <div class="port-subtitle">Multi-Platform E-Commerce Brand</div>
+        <div class="port-desc">Self-built resale brand scaling from a single eBay store to 6+ selling platforms. Averaged $4,200/month in profit at peak. Handled all branding, photography, SEO, inventory, and customer operations in-house.</div>
+        <div class="port-tags">
+          <span class="port-tag">eBay</span>
+          <span class="port-tag">Amazon</span>
+          <span class="port-tag">Etsy</span>
+          <span class="port-tag">Brand Design</span>
+          <span class="port-tag">SEO</span>
+          <span class="port-tag">Operations</span>
+        </div>
+        <div class="port-cta">Read Case Study <span class="arrow">→</span></div>
+      </div>
+    </a>
+    <a href="coming-soon.html?brand=blueprint" class="portfolio-card reveal reveal-delay-3">
+      <div class="portfolio-card-header port-bg-2">
+        <div class="port-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c1 0 1.8-.8 1.8-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.8-.5-1.2 0-1 .8-1.8 1.8-1.8H17c2.8 0 5-2.2 5-5 0-5-4.5-9-10-9z"/><circle cx="7" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="11" cy="7" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="9" r="1" fill="currentColor" stroke="none"/></svg></div>
+        <div class="port-badge badge-legacy">Completed</div>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="port-title">Blueprint Branding</div>
+        <div class="port-subtitle">Digital Marketing Agency</div>
+        <div class="port-desc">Founded and operated a boutique branding and digital marketing agency. Developed visual identities, SEO strategies, and content systems for small businesses. Expanded into Prime Collective with white-label services across a creative network.</div>
+        <div class="port-tags">
+          <span class="port-tag">Brand Identity</span>
+          <span class="port-tag">SEO</span>
+          <span class="port-tag">Content</span>
+          <span class="port-tag">Social Media</span>
+          <span class="port-tag">Client Management</span>
+        </div>
+        <div class="port-cta">Read Case Study <span class="arrow">→</span></div>
+      </div>
+    </a>
+    <a href="coming-soon.html?brand=roam-fetch" class="portfolio-card reveal reveal-delay-4">
+      <div class="portfolio-card-header port-bg-3">
+        <div class="port-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="5.5" cy="10.5" rx="2" ry="2.5"/><ellipse cx="9.5" cy="6" rx="2" ry="2.5"/><ellipse cx="14.5" cy="6" rx="2" ry="2.5"/><ellipse cx="18.5" cy="10.5" rx="2" ry="2.5"/><path d="M12 11.5c-3 0-5.5 2.5-5.5 5 0 1.8 1.5 3 3 3 .8 0 1.5-.3 2-.7l.5-.5.5.5c.5.4 1.2.7 2 .7 1.5 0 3-1.2 3-3 0-2.5-2.5-5-5.5-5z"/></svg></div>
+        <div class="port-badge badge-dev">In Development</div>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="port-title">Roam &amp; Fetch</div>
+        <div class="port-subtitle">Pet Lifestyle Apparel Brand — 2026</div>
+        <div class="port-desc">Active build: a premium pet lifestyle apparel brand targeting affluent, adventure-oriented dog owners. Designed with Shopify + Printify infrastructure, full brand system, AI-assisted design pipeline, and a paid ad flywheel strategy. Launching mid-2026.</div>
+        <div class="port-tags">
+          <span class="port-tag">Shopify</span>
+          <span class="port-tag">Print-on-Demand</span>
+          <span class="port-tag">Brand System</span>
+          <span class="port-tag">AI Design</span>
+          <span class="port-tag">FB Ads</span>
+          <span class="port-tag">Active Build</span>
+        </div>
+        <div class="port-cta">Read Case Study <span class="arrow">→</span></div>
+      </div>
+    </a>
+  </div>
+  <div class="view-all-portfolio reveal">
+    <a href="portfolio.html">View All Portfolio Work <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ AI ADVANTAGE ══════════════════════════ -->
+<section id="ai-advantage">
+  <div class="ai-grid">
+    <div class="ai-text reveal">
+      <div class="section-eyebrow">The AI Edge</div>
+      <h2 class="section-title">Not Just Using AI.<br>Building With It.</h2>
+      <p>Most people use AI like a search engine. I use it as a creative partner, a research engine, a code generator, and an automation backbone — all at once.</p>
+      <p>I've built <strong>multi-agent AI workflows</strong> for market research, design pipelines, and content creation. I've installed and configured AI orchestration tools. I deploy automation systems that run while I sleep.</p>
+      <p>This isn't a skill I'm developing. It's already part of how I operate — and it's why everything I build moves faster than it has any right to.</p>
+      <div class="ai-tools">
+        <div class="ai-tools-title">Tools In Active Use</div>
+        <div class="ai-tool-list">
+          <div class="ai-tool">Claude (Anthropic)</div>
+          <div class="ai-tool">Claude Code</div>
+          <div class="ai-tool">Make.com</div>
+          <div class="ai-tool">Replit</div>
+          <div class="ai-tool">Leonardo AI</div>
+          <div class="ai-tool">Obsidian</div>
+          <div class="ai-tool">Hermes Agent</div>
+          <div class="ai-tool">Upscayl</div>
+        </div>
+      </div>
+    </div>
+    <div class="ai-visual reveal reveal-delay-2">
+      <div class="ai-card">
+        <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="ai-card-title">AI-Augmented Output</div>
+        <div class="ai-card-text">I built a complete brand system, 3 print-ready designs, a full AI knowledge base, and an automation agent stack — all while working full-time. That's the AI multiplier in action.</div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a3 3 0 0 0-3 3v.5A2.5 2.5 0 0 0 6.5 10a2.5 2.5 0 0 0 0 5A2.5 2.5 0 0 0 9 17.5V18a3 3 0 0 0 3 3z"/><path d="M12 4a3 3 0 0 1 3 3v.5a2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1 0 5A2.5 2.5 0 0 1 15 17.5V18a3 3 0 0 1-3 3"/><line x1="12" y1="4" x2="12" y2="21"/></svg></div>
+        <div class="ai-card-title">Institutional Memory</div>
+        <div class="ai-card-text">Custom-built AI knowledge vaults that retain brand decisions, learnings, and strategic frameworks — so nothing gets lost and every decision builds on the last.</div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+        <div class="ai-card-title">Automation Pipelines</div>
+        <div class="ai-card-text">Research agents, design workflows, and content pipelines that run autonomously — reducing time-to-output without reducing quality.</div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg></div>
+        <div class="ai-card-title">Strategic Deployment</div>
+        <div class="ai-card-text">Not using AI to replace thinking — using it to amplify it. Every tool has a specific role in a broader system designed for a specific outcome.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ CONTACT ═══════════════════════════════ -->
+<section id="contact">
+  <div class="contact-inner reveal">
+    <div class="section-eyebrow" style="justify-content:center">Get In Touch</div>
+    <h2 class="section-title">Let's Build<br>Something Together</h2>
+    <p class="contact-sub">Whether you're a hiring manager, a collaborator, or someone who just wants to talk shop about e-commerce, branding, or AI — I'm always up for a good conversation.</p>
+    <div class="contact-methods">
+      <a href="mailto:brandonjguzzardo@gmail.com" class="contact-method">
+        <span class="contact-method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg></span>
+        brandonjguzzardo@gmail.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════ -->
+<footer>
+  <div class="footer-left">© 2026 Brandon Guzzardo</div>
+  <div class="footer-right">Built with <span>AI</span> · Designed with Intent</div>
+</footer>
+
+<script>
+/* ── PARTICLE CANVAS ─────────────────────── */
+(function(){
+  const canvas=document.getElementById('hero-canvas');
+  const ctx=canvas.getContext('2d');
+  let W,H,particles=[];
+  function resize(){
+    W=canvas.width=canvas.offsetWidth;
+    H=canvas.height=canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize',resize);
+  class Particle{
+    constructor(){this.reset()}
+    reset(){
+      this.x=Math.random()*W;
+      this.y=Math.random()*H;
+      this.r=Math.random()*1.2+0.3;
+      this.vx=(Math.random()-.5)*.25;
+      this.vy=(Math.random()-.5)*.25;
+      this.alpha=Math.random()*.5+.1;
+    }
+    update(){
+      this.x+=this.vx;this.y+=this.vy;
+      if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();
+    }
+    draw(){
+      ctx.beginPath();
+      ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(180,210,230,${this.alpha})`;
+      ctx.fill();
+    }
+  }
+  for(let i=0;i<90;i++)particles.push(new Particle());
+  function connect(){
+    for(let i=0;i<particles.length;i++){
+      for(let j=i+1;j<particles.length;j++){
+        const dx=particles[i].x-particles[j].x;
+        const dy=particles[i].y-particles[j].y;
+        const d=Math.sqrt(dx*dx+dy*dy);
+        if(d<120){
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x,particles[i].y);
+          ctx.lineTo(particles[j].x,particles[j].y);
+          ctx.strokeStyle=`rgba(232,96,28,${(1-d/120)*.08})`;
+          ctx.lineWidth=.5;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+  function animate(){
+    ctx.clearRect(0,0,W,H);
+    particles.forEach(p=>{p.update();p.draw()});
+    connect();
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+/* ── TYPEWRITER ──────────────────────────── */
+(function(){
+  const phrases=[
+    'brands that stick.',
+    'e-commerce that converts.',
+    'digital systems that scale.',
+    'content with purpose.',
+    'AI-powered pipelines.',
+  ];
+  let pi=0,ci=0,deleting=false;
+  const el=document.getElementById('typed-text');
+  function tick(){
+    const phrase=phrases[pi];
+    if(!deleting){
+      el.textContent=phrase.slice(0,++ci);
+      if(ci===phrase.length){setTimeout(()=>{deleting=true;tick()},2200);return}
+    } else {
+      el.textContent=phrase.slice(0,--ci);
+      if(ci===0){deleting=false;pi=(pi+1)%phrases.length}
+    }
+    setTimeout(tick,deleting?45:72);
+  }
+  setTimeout(tick,600);
+})();
+
+/* ── SCROLL NAV ──────────────────────────── */
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+});
+
+/* ── REVEAL ON SCROLL ────────────────────── */
+(function(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+})();
+
+/* ── SKILL BARS ──────────────────────────── */
+(function(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.bar-fill').forEach(b=>{
+          b.style.width=(b.dataset.width||'0')+'%';
+        });
+      }
+    });
+  },{threshold:0.2});
+  document.querySelectorAll('.skill-category').forEach(el=>obs.observe(el));
+})();
+
+/* ── BACK TO TOP ─────────────────────────── */
+(function(){
+  const btn=document.getElementById('back-to-top');
+  if(!btn)return;
+  const footer=document.querySelector('footer');
+  let footerVisible=false;
+  function update(){
+    btn.classList.toggle('visible',window.scrollY>400 && !footerVisible);
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+  if(footer){
+    new IntersectionObserver(entries=>{
+      footerVisible=entries[0].isIntersecting;
+      update();
+    },{threshold:0.05}).observe(footer);
+  }
+  update();
+})();
+
+/* ── EXPERIENCE TABS ─────────────────────── */
+document.querySelectorAll('.exp-tab').forEach(tab=>{
+  tab.addEventListener('click',function(){
+    document.querySelectorAll('.exp-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.exp-panel').forEach(p=>p.classList.remove('active'));
+    this.classList.add('active');
+    document.getElementById('panel-'+this.dataset.panel).classList.add('active');
+  });
+});
+
+/* ── NAV DROPDOWN TOGGLE (desktop) ───────── */
+(function(){
+  document.querySelectorAll('.has-dropdown').forEach(li=>{
+    const btn=li.querySelector('.dropdown-toggle');
+    if(!btn)return;
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      document.querySelectorAll('.has-dropdown.open').forEach(other=>{
+        if(other!==li)other.classList.remove('open');
+      });
+      const opened=li.classList.toggle('open');
+      btn.setAttribute('aria-expanded',opened?'true':'false');
+    });
+  });
+  document.addEventListener('click',function(){
+    document.querySelectorAll('.has-dropdown.open').forEach(li=>{
+      li.classList.remove('open');
+      const btn=li.querySelector('.dropdown-toggle');
+      if(btn)btn.setAttribute('aria-expanded','false');
+    });
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){
+      document.querySelectorAll('.has-dropdown.open').forEach(li=>{
+        li.classList.remove('open');
+        const btn=li.querySelector('.dropdown-toggle');
+        if(btn)btn.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+})();
+
+/* ── MOBILE MENU TOGGLE ──────────────────── */
+(function(){
+  const toggle=document.getElementById('nav-toggle');
+  const menu=document.getElementById('mobile-menu');
+  if(!toggle||!menu)return;
+  function close(){
+    toggle.classList.remove('active');
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  toggle.addEventListener('click',function(){
+    const isOpen=menu.classList.toggle('open');
+    toggle.classList.toggle('active',isOpen);
+    toggle.setAttribute('aria-expanded',isOpen?'true':'false');
+    document.body.style.overflow=isOpen?'hidden':'';
+  });
+  // Close menu when any link is tapped
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+  // Close menu on resize to desktop
+  window.addEventListener('resize',function(){
+    if(window.innerWidth>900&&menu.classList.contains('open'))close();
+  });
+  // Close on Escape
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&menu.classList.contains('open'))close();
+  });
+})();
+
+</script>
+</body>
+</html>
