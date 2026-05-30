@@ -719,24 +719,66 @@ section{padding:100px 60px}
   font-size:15px;color:var(--muted);
   line-height:1.7;margin-bottom:48px;
 }
-.contact-methods{
-  display:flex;justify-content:center;gap:20px;
-  flex-wrap:wrap;margin-bottom:60px;
+
+/* contact form */
+.contact-form{
+  text-align:left;
+  display:flex;flex-direction:column;gap:16px;
 }
-.contact-method{
-  display:flex;align-items:center;gap:10px;
+.form-row{display:flex;gap:16px;}
+.form-row .form-group{flex:1;min-width:0;}
+.form-group{display:flex;flex-direction:column;gap:6px;}
+.form-group label{
+  font-size:12px;font-weight:500;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
   background:var(--card);
   border:1px solid var(--border);
   border-radius:8px;
-  padding:16px 24px;
-  text-decoration:none;
+  padding:14px 16px;
   color:var(--light);
-  font-size:14px;
-  transition:border-color .2s,color .2s;
+  font-family:inherit;font-size:14px;
+  outline:none;
+  transition:border-color .2s,box-shadow .2s;
+  width:100%;box-sizing:border-box;
 }
-.contact-method:hover{border-color:var(--orange);color:var(--orange)}
-.contact-method-icon{width:18px;height:18px;color:var(--orange);display:inline-flex;align-items:center}
-.contact-method-icon svg{width:100%;height:100%;display:block}
+.form-group select{
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7fa3' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  padding-right:36px;
+  cursor:pointer;
+}
+.form-group select option{background:var(--dark-navy);}
+.form-group input::placeholder,
+.form-group textarea::placeholder{color:var(--muted);opacity:.6;}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:var(--orange);
+  box-shadow:0 0 0 3px rgba(232,96,28,.12);
+}
+.form-group textarea{resize:vertical;min-height:130px;}
+.form-submit{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;
+  margin-top:4px;
+}
+.form-submit .btn-primary{
+  padding:14px 32px;font-size:15px;cursor:pointer;border:none;
+}
+.form-note{font-size:12px;color:var(--muted);line-height:1.5;}
+.form-success{
+  display:none;
+  background:var(--card);border:1px solid var(--orange);
+  border-radius:8px;padding:24px;text-align:center;
+  color:var(--light);font-size:15px;line-height:1.6;
+}
+.form-success strong{color:var(--orange);}
 
 /* ── BACK TO TOP BUTTON ────────────────── */
 .back-to-top{
@@ -1272,14 +1314,71 @@ footer{
     <div class="section-eyebrow" style="justify-content:center">Get In Touch</div>
     <h2 class="section-title">Let's Build<br>Something Together</h2>
     <p class="contact-sub">Whether you're a hiring manager, a collaborator, or someone who just wants to talk shop about e-commerce, branding, or AI — I'm always up for a good conversation.</p>
-    <div class="contact-methods">
-      <a href="https://mail.google.com/mail/?view=cm&to=brandonjguzzardo@gmail.com" target="_blank" rel="noopener" class="contact-method">
-        <span class="contact-method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg></span>
-        brandonjguzzardo@gmail.com
-      </a>
+
+    <form class="contact-form" action="https://formspree.io/f/xgoqqdzb" method="POST" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="context">I'm reaching out as a...</label>
+        <select id="context" name="context" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Hiring Manager">Hiring Manager</option>
+          <option value="Potential Collaborator">Potential Collaborator</option>
+          <option value="Fellow Entrepreneur">Fellow Entrepreneur</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell me what's on your mind..." required></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn-primary">Send Message →</button>
+        <p class="form-note">I typically respond within 24 hours.<br>No spam — ever.</p>
+      </div>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      <strong>Message received.</strong><br>
+      Thanks for reaching out — I'll be in touch within 24 hours.
     </div>
+
   </div>
 </section>
+
+<script>
+(function(){
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('formSuccess');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var data = new FormData(form);
+    fetch(form.action, {
+      method:'POST',
+      body:data,
+      headers:{'Accept':'application/json'}
+    }).then(function(r){
+      if(r.ok){
+        form.style.display='none';
+        success.style.display='block';
+      } else {
+        alert('Something went wrong. Please email me directly at brandonjguzzardo@gmail.com');
+      }
+    }).catch(function(){
+      alert('Something went wrong. Please email me directly at brandonjguzzardo@gmail.com');
+    });
+  });
+})();
+</script>
 
 <!-- ══ FOOTER ════════════════════════════════ -->
 <footer>
