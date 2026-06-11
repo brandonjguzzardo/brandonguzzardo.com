@@ -212,6 +212,28 @@ footer .right span { color:var(--orange); }
 .back-to-top:hover{background:var(--orange2);transform:translateY(-2px) scale(1)}
 .back-to-top svg{width:20px;height:20px;display:block}
 
+.scroll-indicator{
+  position:fixed;bottom:28px;left:50%;transform:translateX(-50%);
+  z-index:79;opacity:0;transition:opacity .5s ease;pointer-events:none;
+}
+.scroll-indicator.visible{opacity:1;pointer-events:auto}
+.scroll-indicator-inner{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:#7FCBE2;
+  font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+  animation:scrollBounce 2s infinite;
+  filter:drop-shadow(0 0 10px rgba(127,203,226,0.7)) drop-shadow(0 0 22px rgba(127,203,226,0.35));
+  cursor:pointer;
+}
+.scroll-indicator .scroll-line{
+  display:block;width:1px;height:36px;
+  background:linear-gradient(to bottom,#7FCBE2,transparent);
+  box-shadow:0 0 6px rgba(127,203,226,0.7);
+}
+@keyframes scrollBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+@media(max-width:600px){.scroll-indicator{bottom:20px}}
+
 /* ── MOBILE ───────────────────────────── */
 @media(max-width:900px) {
   nav { padding:16px 24px; }
@@ -263,6 +285,13 @@ footer .right span { color:var(--orange); }
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
+<div class="scroll-indicator" id="scroll-indicator">
+  <a class="scroll-indicator-inner" href="#" aria-label="Scroll down">
+    <span class="scroll-line"></span>
+    <span>Scroll</span>
+  </a>
+</div>
+
 <footer>
   <div>© 2026 Brandon Guzzardo</div>
   <div class="right">Built with <span>AI</span> · Designed with Intent</div>
@@ -286,6 +315,19 @@ footer .right span { color:var(--orange); }
     },{threshold:0.05}).observe(footer);
   }
   update();
+})();
+
+/* Scroll indicator (sticky) */
+(function(){
+  const ind=document.getElementById('scroll-indicator');
+  if(!ind)return;
+  const footer=document.querySelector('footer');
+  let footerVisible=false,loaded=false;
+  function update(){ind.classList.toggle('visible',loaded && !footerVisible)}
+  const link=ind.querySelector('a');
+  if(link){link.addEventListener('click',function(e){e.preventDefault();window.scrollBy({top:window.innerHeight-100,behavior:'smooth'})})}
+  if(footer){new IntersectionObserver(entries=>{footerVisible=entries[0].isIntersecting;update()},{threshold:0.05}).observe(footer)}
+  setTimeout(()=>{loaded=true;update()},800);
 })();
 </script>
 

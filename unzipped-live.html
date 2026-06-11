@@ -174,14 +174,27 @@ body{
   border-radius:20px;
   color:var(--uz-sky);
 }
-.hero-scroll{
-  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:8px;
-  color:var(--muted);font-size:10px;letter-spacing:2px;text-transform:uppercase;
-  animation:bounce 2s infinite;
-  opacity:0;animation:fadeIn 1s 1.5s forwards, bounce 2s 2s infinite;
+.scroll-indicator{
+  position:fixed;bottom:28px;left:50%;transform:translateX(-50%);
+  z-index:79;opacity:0;transition:opacity .5s ease;pointer-events:none;
 }
-.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,var(--uz-sky),transparent)}
+.scroll-indicator.visible{opacity:1;pointer-events:auto}
+.scroll-indicator-inner{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:#7FCBE2;
+  font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+  animation:scrollBounce 2s infinite;
+  filter:drop-shadow(0 0 10px rgba(127,203,226,0.7)) drop-shadow(0 0 22px rgba(127,203,226,0.35));
+  cursor:pointer;
+}
+.scroll-indicator .scroll-line{
+  display:block;width:1px;height:36px;
+  background:linear-gradient(to bottom,#7FCBE2,transparent);
+  box-shadow:0 0 6px rgba(127,203,226,0.7);
+}
+@keyframes scrollBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+@media(max-width:600px){.scroll-indicator{bottom:20px}}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes zoomFadeUp{from{opacity:0;transform:translateY(16px) scale(0.88)}to{opacity:1;transform:translateY(0) scale(1)}}
@@ -510,10 +523,6 @@ body{
       <span class="hero-tag">Brand Extension</span>
     </div>
   </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    Scroll
-  </div>
 </section>
 
 <div class="section-divider"></div>
@@ -737,6 +746,14 @@ body{
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
+<!-- ── SCROLL INDICATOR ────────────────────── -->
+<div class="scroll-indicator" id="scroll-indicator">
+  <a class="scroll-indicator-inner" href="#" aria-label="Scroll down">
+    <span class="scroll-line"></span>
+    <span>Scroll</span>
+  </a>
+</div>
+
 <!-- ── FOOTER NAV ──────────────────────────── -->
 <div class="case-footer">
   <a href="portfolio.html" class="footer-nav-link back-home">
@@ -789,6 +806,19 @@ window.addEventListener('load', () => {
     }, {threshold: 0.05}).observe(footer);
   }
   update();
+})();
+
+/* Scroll indicator (sticky) */
+(function(){
+  const ind=document.getElementById('scroll-indicator');
+  if(!ind)return;
+  const footer=document.querySelector('.site-footer');
+  let footerVisible=false,loaded=false;
+  function update(){ind.classList.toggle('visible',loaded && !footerVisible)}
+  const link=ind.querySelector('a');
+  if(link){link.addEventListener('click',function(e){e.preventDefault();window.scrollBy({top:window.innerHeight-100,behavior:'smooth'})})}
+  if(footer){new IntersectionObserver(entries=>{footerVisible=entries[0].isIntersecting;update()},{threshold:0.05}).observe(footer)}
+  setTimeout(()=>{loaded=true;update()},800);
 })();
 </script>
 </body>
