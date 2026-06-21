@@ -413,20 +413,71 @@ body{
   transform:translateY(-4px);
 }
 .ecosystem-logo{
-  width:130px;height:130px;
-  margin-bottom:24px;
+  width:200px;height:200px;
+  margin-bottom:28px;
   display:flex;align-items:center;justify-content:center;
+  filter:drop-shadow(0 12px 32px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(124,185,251,0.12));
 }
 .ecosystem-logo img{width:100%;height:100%;object-fit:contain}
 .ecosystem-placeholder{
-  width:130px;height:130px;
+  width:200px;height:200px;
   border:1px dashed rgba(124,185,251,0.3);
   border-radius:50%;
   display:flex;align-items:center;justify-content:center;
   color:var(--muted);text-align:center;
   font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
-  line-height:1.5;padding:0 12px;
-  margin-bottom:24px;
+  line-height:1.5;padding:0 16px;
+  margin-bottom:28px;
+}
+
+/* ── YOUTUBE WIDE CARD ────────────────── */
+.ecosystem-youtube{
+  margin-top:24px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  transition:border-color .25s,transform .25s;
+}
+.ecosystem-youtube:hover{
+  border-color:rgba(124,185,251,0.45);
+  transform:translateY(-4px);
+}
+.ecosystem-youtube-banner{
+  width:100%;
+  display:block;
+  aspect-ratio:1776/1000;
+  object-fit:cover;
+}
+.ecosystem-youtube-content{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:40px;
+  align-items:center;
+  padding:36px 40px;
+}
+.ecosystem-youtube-text{}
+.ecosystem-youtube-name{
+  font-family:'Syne',sans-serif;font-weight:700;
+  font-size:24px;color:var(--white);
+  margin-bottom:6px;line-height:1.1;
+}
+.ecosystem-youtube-role{
+  font-size:10px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gm-sky);margin-bottom:16px;
+}
+.ecosystem-youtube-desc{
+  font-size:14px;color:var(--text);line-height:1.7;
+  max-width:560px;
+}
+.ecosystem-youtube-stat{
+  border-left:1px solid var(--border);
+  padding-left:36px;
+  text-align:center;
+  min-width:180px;
+}
+.ecosystem-youtube-stat .ecosystem-stat-num{
+  font-size:36px;
 }
 .ecosystem-card-name{
   font-family:'Syne',sans-serif;font-weight:700;
@@ -455,6 +506,54 @@ body{
 .ecosystem-stat-label{
   font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
   color:var(--muted);margin-top:8px;
+}
+
+/* ── STORY FIGURE (contextual logo + blurb alongside text) ── */
+.story-figure{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:60px;
+  align-items:center;
+  margin-top:36px;
+}
+.story-figure.reverse{grid-template-columns:1fr 1.2fr}
+.story-figure-image{
+  text-align:center;
+}
+.story-figure-image img{
+  width:100%;
+  max-width:340px;
+  display:block;
+  margin:0 auto;
+  filter:drop-shadow(0 16px 40px rgba(0,0,0,0.5)) drop-shadow(0 0 32px rgba(124,185,251,0.18));
+}
+.story-figure-blurb{
+  margin-top:24px;
+  padding:18px 22px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-left:3px solid var(--gm-sky);
+  border-radius:0 8px 8px 0;
+  font-size:13px;
+  color:var(--text);
+  line-height:1.65;
+  font-style:italic;
+  text-align:left;
+}
+.story-figure-blurb-label{
+  display:block;
+  font-size:10px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--gm-sky);
+  font-style:normal;
+  margin-bottom:8px;
+}
+@media(max-width:900px){
+  .story-figure,.story-figure.reverse{
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+  .story-figure-image{order:-1}
 }
 
 /* ── REFLECTION SECTION (Zoom call, Burden, Lesson) ── */
@@ -573,6 +672,10 @@ body{
   .section{padding:80px 24px}
   .overview-grid,.extension-grid{grid-template-columns:1fr;gap:32px}
   .ecosystem-grid{grid-template-columns:1fr;gap:16px}
+  .ecosystem-logo,.ecosystem-placeholder{width:160px;height:160px}
+  .ecosystem-youtube-content{grid-template-columns:1fr;gap:24px;padding:28px 24px;text-align:center}
+  .ecosystem-youtube-stat{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:20px;min-width:auto}
+  .ecosystem-youtube-desc{margin:0 auto}
   .decision-grid{grid-template-columns:1fr}
   .decision-card.featured{grid-column:auto}
   .palette-display{grid-template-columns:repeat(2,1fr)}
@@ -701,15 +804,24 @@ body{
       <div class="section-label">The Foundation</div>
       <h2 class="section-title">The Mark That<br/>Already Had a Soul.</h2>
     </div>
-    <div class="reveal reveal-delay-1">
-      <p class="body-text">The brand name wasn't mine to invent. <em>"Gorilla"</em> already existed — it was the founder's metaphor. His intellectual fingerprint on how he thought about marketing. <strong>Gorilla warfare. Move fast. Hit hard. Disappear before they know what happened. Repeat.</strong></p>
+    <div class="story-figure reveal reveal-delay-1">
+      <div class="story-figure-text">
+        <p class="body-text">The brand name wasn't mine to invent. <em>"Gorilla"</em> already existed — it was the founder's metaphor. His intellectual fingerprint on how he thought about marketing. <strong>Gorilla warfare. Move fast. Hit hard. Disappear before they know what happened. Repeat.</strong></p>
 
-      <div class="pull-quote">
-        <div class="pull-quote-text">"My job wasn't to create the identity from scratch. My job was to excavate it — to find what was already there and build a visual system worthy of what the brand was becoming."</div>
-        <div class="pull-quote-attr">On the role of the designer</div>
+        <div class="pull-quote">
+          <div class="pull-quote-text">"My job wasn't to create the identity from scratch. My job was to excavate it — to find what was already there and build a visual system worthy of what the brand was becoming."</div>
+          <div class="pull-quote-attr">On the role of the designer</div>
+        </div>
+
+        <p class="body-text">The original gorilla mark was a starting point. A foundation. It had the right instinct but not the full vision. So I went to work — and the decision that changed everything was the gear.</p>
       </div>
-
-      <p class="body-text">The original gorilla mark was a starting point. A foundation. It had the right instinct but not the full vision. So I went to work — and the decision that changed everything was the gear.</p>
+      <div class="story-figure-image">
+        <img src="images/gorilla-marketing/logo_original.png" alt="Gorilla Marketing — Original Mark"/>
+        <div class="story-figure-blurb">
+          <span class="story-figure-blurb-label">The Original</span>
+          The mark we inherited. Raw force, no architecture — but the soul of the brand was already in there. None of us knew yet what we were about to grow it into.
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -722,7 +834,20 @@ body{
     <div class="reveal">
       <div class="section-label">The Decisive Moment</div>
       <h2 class="section-title">The Decision That<br/>Changed Everything.</h2>
-      <p class="body-text">A gorilla alone is raw force. Intimidating, yes. But unpredictable. When you put that gorilla face inside a gear — suddenly you have something different entirely. <strong>Raw force, systematized. Power, made mechanical.</strong> The whole brand promise in a single visual choice: we're not just going to hit hard. We're going to hit hard, on schedule, every time, like a machine.</p>
+    </div>
+
+    <div class="story-figure reverse reveal reveal-delay-1">
+      <div class="story-figure-image">
+        <img src="images/gorilla-marketing/logo_first_draft.png" alt="Gorilla Marketing — First Draft"/>
+        <div class="story-figure-blurb">
+          <span class="story-figure-blurb-label">First Draft</span>
+          Cleaner lines. More depth. The character starting to emerge. But still searching for the structural choice that would turn raw force into something systematized.
+        </div>
+      </div>
+      <div class="story-figure-text">
+        <p class="body-text">A gorilla alone is raw force. Intimidating, yes. But unpredictable. When you put that gorilla face inside a gear — suddenly you have something different entirely. <strong>Raw force, systematized. Power, made mechanical.</strong></p>
+        <p class="body-text">The whole brand promise in a single visual choice: we're not just going to hit hard. We're going to hit hard, on schedule, every time, like a machine.</p>
+      </div>
     </div>
 
     <div class="decision-grid reveal reveal-delay-2">
@@ -772,13 +897,25 @@ body{
 <!-- ── ECOSYSTEM ──────────────────────────── -->
 <section class="section extension-section">
   <div class="section-inner wide">
-    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto">
+    <div class="reveal" style="text-align:center;max-width:760px;margin:0 auto">
       <div class="section-label" style="justify-content:center">Building the Ecosystem</div>
-      <h2 class="section-title">Three Tiers.<br/>One Movement.</h2>
-      <p class="body-text">Once the visual identity was locked in, the conversation shifted to something bigger. Not a logo refresh — a complete brand ecosystem. <strong>Three tiers, each serving a distinct role</strong> in the community's growth. A funnel disguised as a content library.</p>
+      <h2 class="section-title">One Master Brand.<br/>Three Outlets. One Movement.</h2>
+      <p class="body-text">Once the visual identity was locked in, the conversation shifted to something bigger. Not a logo refresh — a complete brand ecosystem. <strong>A master brand, two community tiers, and a content engine that fed them both.</strong> A funnel disguised as a content library.</p>
     </div>
 
     <div class="ecosystem-grid reveal reveal-delay-2">
+      <!-- Master: Gorilla Marketing -->
+      <div class="ecosystem-card">
+        <div class="ecosystem-logo"><img src="images/gorilla-marketing/gorilla_marketing_logo.png" alt="Gorilla Marketing — Master Brand"/></div>
+        <div class="ecosystem-card-name">Gorilla Marketing</div>
+        <div class="ecosystem-card-role">The Master Brand · The Source</div>
+        <div class="ecosystem-card-desc">The source identity. Where every sub-brand drew its visual language, its energy, its rules of engagement. The mark that started a movement.</div>
+        <div class="ecosystem-stat">
+          <span class="ecosystem-stat-num" style="font-size:22px;letter-spacing:1px">THE FOUNDATION</span>
+          <div class="ecosystem-stat-label">1 mark · 3 communities</div>
+        </div>
+      </div>
+
       <!-- Tier 1: Gorilla Army Nation -->
       <div class="ecosystem-card">
         <div class="ecosystem-logo"><img src="images/gorilla-marketing/gan_logo.png" alt="Gorilla Army Nation"/></div>
@@ -802,14 +939,18 @@ body{
           <div class="ecosystem-stat-label">Highly engaged · Built from zero</div>
         </div>
       </div>
+    </div>
 
-      <!-- Tier 3: YouTube Channel -->
-      <div class="ecosystem-card">
-        <div class="ecosystem-placeholder">YouTube<br/>Banner<br/>Visual Coming Soon</div>
-        <div class="ecosystem-card-name">YouTube Channel</div>
-        <div class="ecosystem-card-role">The Engine · The Content Machine</div>
-        <div class="ecosystem-card-desc">The machine that fed both tiers. Every video engineered for immediate, actionable value while pulling viewers deeper into the ecosystem. Real growth within a month of launch.</div>
-        <div class="ecosystem-stat">
+    <!-- YouTube: wide banner card -->
+    <div class="ecosystem-youtube reveal reveal-delay-3">
+      <img src="images/gorilla-marketing/youtube_banner.jpg" alt="Gorilla Marketing YouTube Banner" class="ecosystem-youtube-banner"/>
+      <div class="ecosystem-youtube-content">
+        <div class="ecosystem-youtube-text">
+          <div class="ecosystem-youtube-name">YouTube Channel</div>
+          <div class="ecosystem-youtube-role">The Engine · The Content Machine</div>
+          <div class="ecosystem-youtube-desc">The machine that fed every tier of the ecosystem. Every video engineered for immediate, actionable value while pulling viewers deeper into the community. Real growth within a month of launch.</div>
+        </div>
+        <div class="ecosystem-youtube-stat">
           <span class="ecosystem-stat-num">100K+</span>
           <div class="ecosystem-stat-label">Subscribers · 100+ videos</div>
         </div>
