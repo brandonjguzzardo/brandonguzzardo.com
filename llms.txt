@@ -1,0 +1,20 @@
+# Brandon Guzzardo
+
+> Digital brand builder and e-commerce operator with 15+ years of real-world experience across brand development, e-commerce operations, digital marketing, and business operations — now working AI-augmented, using AI-powered workflows to multiply output and accelerate results.
+
+This site is Brandon Guzzardo's personal brand and portfolio — it functions as his resume. There is no downloadable PDF; the site itself is the credential.
+
+## Background
+
+Brandon Guzzardo is a self-taught, blue-collar entrepreneur based in Madison, WI. He builds brand identities and e-commerce businesses end to end — strategy, design, storefront build, and go-to-market — and has increasingly integrated AI tooling (including Claude Code) directly into that process, from design to code to marketing.
+
+## Key Pages
+
+- [Home](https://brandonguzzardo.com/): Overview of background, skills, experience, and how AI fits into his workflow.
+- [Portfolio](https://brandonguzzardo.com/portfolio.html): Full gallery of brand identity case studies and e-commerce ventures.
+- [Unzipped Live Case Study](https://brandonguzzardo.com/unzipped-live.html): Brand identity and logo design case study for a podcast brand.
+- [Gorilla Marketing Case Study](https://brandonguzzardo.com/gorilla-marketing.html): Brand identity and community ecosystem build — logo, brand system, and content strategy.
+
+## Contact
+
+Reach Brandon through the contact form on the homepage at https://brandonguzzardo.com/#contact.
