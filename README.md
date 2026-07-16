@@ -1,6 +1,6 @@
 # brandonguzzardo.com
 
-Personal brand & portfolio website for Brandon Guzzardo — e-commerce operator, brand developer, and AI-augmented digital marketer.
+Personal brand & portfolio website for Brandon Guzzardo — brand strategist and designer, amplified by AI.
 
 🌐 **Live at:** [brandonguzzardo.com](https://brandonguzzardo.com)
 
@@ -21,7 +21,9 @@ Personal brand & portfolio website for Brandon Guzzardo — e-commerce operator,
 | `index.html` | Homepage — about, skills, experience, AI edge, featured work, contact |
 | `portfolio.html` | Dedicated portfolio gallery — all brand case studies |
 | `unzipped-live.html` | Full case study for the Unzipped Live brand identity project |
+| `gorilla-marketing.html` | Full case study for the Gorilla Marketing brand & community build |
 | `coming-soon.html` | Branded placeholder for case studies still in development (brand-aware via `?brand=X` URL param) |
+| `experience.html` | Planned — long-form immersive experience page (not yet linked in nav) |
 
 ## To update
 

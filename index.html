@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Brandon Guzzardo — Digital Brand Builder &amp; E-Commerce Operator</title>
-<meta name="description" content="15+ years building brands, e-commerce operations, and AI-powered digital systems. Brand developer, e-commerce operator, and AI-augmented professional."/>
+<title>Brandon Guzzardo — Brand Strategist &amp; Designer, Amplified by AI</title>
+<meta name="description" content="15+ years building brands — brand identity, e-commerce, and digital marketing — now amplified by AI. Brand strategist, designer, and AI-augmented operator."/>
 <meta name="author" content="Brandon Guzzardo"/>
 <link rel="canonical" href="https://brandonguzzardo.com/"/>
 
 <!-- Open Graph / Facebook / LinkedIn -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://brandonguzzardo.com/"/>
-<meta property="og:title" content="Brandon Guzzardo — Digital Brand Builder"/>
-<meta property="og:description" content="15+ years building brands, e-commerce operations, and AI-powered digital systems."/>
+<meta property="og:title" content="Brandon Guzzardo — Brand Strategist &amp; Designer"/>
+<meta property="og:description" content="15+ years building brands, now amplified by AI. I make brands impossible to ignore."/>
 <meta property="og:image" content="https://brandonguzzardo.com/og-image.png"/>
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Brandon Guzzardo — Digital Brand Builder"/>
-<meta name="twitter:description" content="15+ years building brands, e-commerce operations, and AI-powered digital systems."/>
+<meta name="twitter:title" content="Brandon Guzzardo — Brand Strategist &amp; Designer"/>
+<meta name="twitter:description" content="15+ years building brands, now amplified by AI. I make brands impossible to ignore."/>
 <meta name="twitter:image" content="https://brandonguzzardo.com/og-image.png"/>
 
 <!-- Favicon — BG brand mark -->
@@ -33,8 +33,8 @@
   "name": "Brandon Guzzardo",
   "url": "https://brandonguzzardo.com/",
   "image": "https://brandonguzzardo.com/images/brand-logo.png",
-  "jobTitle": "Digital Brand Builder & E-Commerce Operator",
-  "description": "15+ years of real-world experience across e-commerce, brand development, digital marketing, and operations — now supercharged with AI-powered workflows.",
+  "jobTitle": "Brand Strategist & Designer",
+  "description": "15+ years building brands — brand identity, e-commerce, digital marketing, and operations — now amplified by AI-powered workflows, not replaced by them.",
   "knowsAbout": ["Brand Identity Design", "E-Commerce Operations", "Digital Marketing", "AI-Powered Workflows", "Print-on-Demand"],
   "mainEntityOfPage": "https://brandonguzzardo.com/"
 }
@@ -525,6 +525,13 @@ section{padding:100px 60px}
 #experience{background:var(--dark)}
 .exp-container{display:grid;grid-template-columns:1fr 2fr;gap:60px}
 .exp-tabs{display:flex;flex-direction:column;gap:4px}
+.exp-tab-group{
+  font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  color:var(--steel);
+  padding:6px 20px 4px;margin-top:14px;
+  border-bottom:1px solid var(--border);margin-bottom:4px;
+}
+.exp-tab-group:first-child{margin-top:0}
 .exp-tab{
   padding:14px 20px;
   border-radius:8px;
@@ -892,6 +899,7 @@ footer{
   /* Experience tabs: horizontal scroll on mobile so they don't cramp */
   .exp-tabs{
     flex-direction:row;
+    align-items:center;
     overflow-x:auto;
     gap:6px;
     padding-bottom:8px;
@@ -901,6 +909,13 @@ footer{
   .exp-tabs::-webkit-scrollbar{display:none}
   .exp-tab{flex:0 0 auto;white-space:nowrap;border-left:none;border-bottom:2px solid transparent}
   .exp-tab.active{border-left-color:transparent;border-bottom-color:var(--orange)}
+  /* On mobile the group labels become inline separators in the scroll strip */
+  .exp-tab-group{
+    flex:0 0 auto;white-space:nowrap;align-self:center;
+    border-bottom:none;margin:0;padding:6px 2px 6px 14px;
+    border-left:1px solid var(--border);
+  }
+  .exp-tab-group:first-child{padding-left:0;border-left:none}
   .about-stats{grid-template-columns:1fr 1fr;gap:14px}
   .stat-card{padding:18px}
   .stat-num{font-size:30px}
@@ -992,15 +1007,15 @@ footer{
   <canvas id="hero-canvas"></canvas>
   <div class="hero-bg-gradient"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Digital Brand Builder &amp; E-Commerce Operator</div>
+    <div class="hero-eyebrow">Brand Strategist &amp; Designer · Amplified by AI</div>
     <h1 class="hero-name">Brandon<br><span>Guzzardo</span></h1>
     <p class="hero-tagline">
       I build <span class="typed" id="typed-text"></span><span class="cursor"></span>
     </p>
     <p class="hero-sub">
-      15+ years of <strong>real-world experience</strong> across e-commerce, brand development, 
-      digital marketing, and operations — now supercharged with <strong>AI-powered workflows</strong> 
-      that multiply output and accelerate results.
+      15+ years building brands the hard way — brand identity, e-commerce, digital marketing,
+      and operations — now <strong>amplified by AI</strong>, not replaced by it. Real craft,
+      multiplied by workflows that move faster than they have any right to.
     </p>
     <div class="hero-actions">
       <a href="portfolio.html" class="btn-primary">View My Work</a>
@@ -1022,7 +1037,7 @@ footer{
       <div class="section-eyebrow">About Me</div>
       <h2 class="section-title">Built Different.<br>From Day One.</h2>
       <p>I didn't come up through a marketing department or a design school. I built brands, ran businesses, managed teams, and figured out digital marketing the hard way — by doing it, failing at it, and doing it better.</p>
-      <p>From launching a <strong>multi-platform e-commerce brand</strong> that hit $4,200+/month in profit, to developing brand identities for real clients, to leading teams in fast-paced retail environments — my background is unusually wide, and that's the point.</p>
+      <p>From building a <strong>multi-platform e-commerce brand</strong> that did over $1M in sales in 2018, to designing brand identities for real clients, to leading teams in fast-paced retail environments — my background is unusually wide, and that's the point.</p>
       <p>Today I combine that foundation with <strong>AI tools, automation platforms, and digital strategy</strong> to build and operate at a level that used to require a whole team.</p>
       <div class="about-stats">
         <div class="stat-card">
@@ -1034,8 +1049,8 @@ footer{
           <div class="stat-label">Platforms Operated</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">$4.2K</div>
-          <div class="stat-label">Monthly E-Com Peak</div>
+          <div class="stat-num">$1M+</div>
+          <div class="stat-label">E-Com Sales · 2018</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">∞</div>
@@ -1122,6 +1137,7 @@ footer{
   </div>
   <div class="exp-container reveal reveal-delay-1">
     <div class="exp-tabs">
+      <div class="exp-tab-group">Brand &amp; Business Ventures</div>
       <button class="exp-tab active" data-panel="bizy">
         Bizy Bz Buzzar
         <span class="tab-company">2017 – 2020</span>
@@ -1129,6 +1145,11 @@ footer{
       <button class="exp-tab" data-panel="blueprint">
         Blueprint Branding
         <span class="tab-company">2015 – 2018</span>
+      </button>
+      <div class="exp-tab-group">The Career That Forged the Craft</div>
+      <button class="exp-tab" data-panel="menards">
+        Menards
+        <span class="tab-company">2006 – 2012</span>
       </button>
       <button class="exp-tab" data-panel="verizon">
         Cellular Sales / Verizon
@@ -1142,10 +1163,6 @@ footer{
         The Home Depot
         <span class="tab-company">2025 – Present</span>
       </button>
-      <button class="exp-tab" data-panel="menards">
-        Menards
-        <span class="tab-company">2006 – 2012</span>
-      </button>
     </div>
     <div class="exp-panels">
       <div class="exp-panel active" id="panel-bizy">
@@ -1155,20 +1172,20 @@ footer{
         <ul class="exp-bullets">
           <li>Built a self-funded multi-platform resale brand from zero — started on eBay, expanded to Amazon, Etsy, Facebook Marketplace, Craigslist, and more.</li>
           <li>Managed every element of the operation: product sourcing, photography, SEO-optimized listing creation, pricing strategy, inventory, and customer service.</li>
-          <li>Averaged $4,200+/month in net profit at peak — through smart sourcing, platform-specific strategy, and tight operations.</li>
+          <li>Grew it to over $1,000,000 in sales in 2018 — consistently $60,000+/month at 50%+ margins — driven by a sourcing eye that spotted deeply undervalued inventory nobody else clocked and knew exactly what it was worth.</li>
           <li>Designed original brand identity including logo, visual system, and platform voice — all in-house.</li>
           <li>Maintained strong seller metrics across all platforms, including account health, seller ratings, and dispute resolution.</li>
         </ul>
       </div>
       <div class="exp-panel" id="panel-blueprint">
         <div class="exp-panel-dates">May 2015 – July 2018</div>
-        <div class="exp-panel-title">Founder — Brand Developer &amp; Digital Marketer</div>
-        <div class="exp-panel-company">Blueprint Branding / Prime Collective — Janesville, WI / La Veta, CO</div>
+        <div class="exp-panel-title">Founder / Co-Founder &amp; Creative Director</div>
+        <div class="exp-panel-company">Blueprint Branding / Prime Collective — Beloit, WI</div>
         <ul class="exp-bullets">
-          <li>Founded and operated a digital marketing and branding agency — serving small businesses with brand identity, SEO, social media strategy, and content creation.</li>
-          <li>Developed visual identities, messaging frameworks, and digital presence strategies tailored to each client's target audience.</li>
-          <li>Coordinated white-label services across a creative network — managed client expectations, timelines, and deliverable quality.</li>
-          <li>Operated remotely from Colorado while maintaining a full client roster — early experience with distributed, digital-first work.</li>
+          <li>Built Blueprint to put a name to the design work I was already doing — logos, graphics, and websites for the people around me, plus real paying jobs like the roofing and car-detailing companies whose sites I built.</li>
+          <li>Forged my system for producing clean, deliverable brand design for a client — the foundation everything I do now is built on.</li>
+          <li>Expanded into Prime Collective — assembling a small team to offer the full service: build a brand from an idea, or take an existing one past its limits.</li>
+          <li>Learned hard, lasting lessons about running a creative team before it ran its course.</li>
         </ul>
       </div>
       <div class="exp-panel" id="panel-verizon">
@@ -1209,10 +1226,10 @@ footer{
         <div class="exp-panel-title">Department Manager — Cabinets &amp; Appliances</div>
         <div class="exp-panel-company">Menards Home Improvement — Janesville / Beloit, WI</div>
         <ul class="exp-bullets">
-          <li>Managed full department operations for 5+ years — team scheduling, payroll, inventory management, and sales performance.</li>
-          <li>Certified in 20/20 CAD kitchen design software — created visual design renderings and full project specs for customer remodeling projects.</li>
-          <li>Consistently exceeded sales targets while maintaining department standards and team performance metrics.</li>
-          <li>Developed team management fundamentals that have carried through every leadership role since.</li>
+          <li>Started in 2006 and worked my way up to running a department — team scheduling, payroll, inventory, and sales performance across 5+ years.</li>
+          <li>Some of the biggest millwork and kitchen sales the company had seen came out of those years — but none of them were mine alone. They came from teams that trusted me to lead and customers who felt genuinely taken care of. The lesson I've carried since: it's not just what you do, it's how you do it.</li>
+          <li>Where I first learned design — Menards trained me on the 20/20 program to build full kitchen renderings and project specs, and I fell for it hard. That's where the design bug bit.</li>
+          <li>Built the team-leadership fundamentals that have carried through every role since.</li>
         </ul>
       </div>
     </div>
@@ -1255,13 +1272,13 @@ footer{
       <div class="portfolio-card-body">
         <div class="port-title">Bizy Bz Buzzar</div>
         <div class="port-subtitle">Multi-Platform E-Commerce Brand</div>
-        <div class="port-desc">Self-built resale brand scaling from a single eBay store to 6+ selling platforms. Averaged $4,200/month in profit at peak. Handled all branding, photography, SEO, inventory, and customer operations in-house.</div>
+        <div class="port-desc">Self-built resale brand scaling from a single eBay store to 6+ selling platforms — over $1M in sales in 2018 at 50%+ margins. The real edge was sourcing: seeing value nobody else clocked. Branding, photography, SEO, inventory, and customer ops — all in-house.</div>
         <div class="port-tags">
           <span class="port-tag">eBay</span>
           <span class="port-tag">Amazon</span>
           <span class="port-tag">Etsy</span>
+          <span class="port-tag">Sourcing</span>
           <span class="port-tag">Brand Design</span>
-          <span class="port-tag">SEO</span>
           <span class="port-tag">Operations</span>
         </div>
         <div class="port-cta">Read Case Study <span class="arrow">→</span></div>
@@ -1274,14 +1291,13 @@ footer{
       </div>
       <div class="portfolio-card-body">
         <div class="port-title">Blueprint Branding</div>
-        <div class="port-subtitle">Digital Marketing Agency</div>
-        <div class="port-desc">Founded and operated a boutique branding and digital marketing agency. Developed visual identities, SEO strategies, and content systems for small businesses. Expanded into Prime Collective with white-label services across a creative network.</div>
+        <div class="port-subtitle">Brand &amp; Design Studio</div>
+        <div class="port-desc">The brand I built to name the design work I was already doing — logos, graphics, and websites for friends, online communities, and real paying clients like local roofing and detailing companies. Expanded into Prime Collective, a small team offering the full brand-build service.</div>
         <div class="port-tags">
           <span class="port-tag">Brand Identity</span>
-          <span class="port-tag">SEO</span>
-          <span class="port-tag">Content</span>
-          <span class="port-tag">Social Media</span>
-          <span class="port-tag">Client Management</span>
+          <span class="port-tag">Logo Design</span>
+          <span class="port-tag">Web Design</span>
+          <span class="port-tag">Client Work</span>
         </div>
         <div class="port-cta">Read Case Study <span class="arrow">→</span></div>
       </div>
@@ -1294,7 +1310,7 @@ footer{
       <div class="portfolio-card-body">
         <div class="port-title">Roam &amp; Fetch</div>
         <div class="port-subtitle">Pet Lifestyle Apparel Brand — 2026</div>
-        <div class="port-desc">Active build: a premium pet lifestyle apparel brand targeting affluent, adventure-oriented dog owners. Designed with Shopify + Printify infrastructure, full brand system, AI-assisted design pipeline, and a paid ad flywheel strategy. Launching mid-2026.</div>
+        <div class="port-desc">Active build: an adventure brand for explorers who refuse to leave their dog behind. It's also a deliberate experiment — built roughly 80% by AI and 20% by me: I bring the creative direction and judgment, AI brings the horsepower. Living proof of real brand skill amplified by AI, not replaced by it.</div>
         <div class="port-tags">
           <span class="port-tag">Shopify</span>
           <span class="port-tag">Print-on-Demand</span>
